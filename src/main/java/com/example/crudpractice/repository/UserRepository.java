@@ -1,4 +1,8 @@
 package com.example.crudpractice.repository;
 
-public class UserRepository {
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.crudpractice.model.user;
+public interface UserRepository extends JpaRepository<user, Long> {
+
 }
