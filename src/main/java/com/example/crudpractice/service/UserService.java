@@ -19,6 +19,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public user getUserById(Long id){
+        return userRepository.findById(id).orElseThrow(() -> new NoSuchElementException("No user with id: " + id));
+    }
+
     public user createUser(user user){
         return userRepository.save(user);
     }
